@@ -1,0 +1,1 @@
+# jenkins_artifactory_gradle
