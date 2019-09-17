@@ -12,6 +12,19 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application
     id 'application'
+
+    id 'org.ajoberstar.grgit' version '1.7.2'
+    id 'org.ajoberstar.release-opinion' version '1.7.2'
+}
+
+import org.ajoberstar.gradle.git.release.opinion.Strategies
+
+release {
+    versionStrategy Strategies.FINAL
+    defaultVersionStrategy Strategies.SNAPSHOT
+    tagStrategy {
+        generateMessage = { version -> "Version $project.version" }
+    }
 }
 
 repositories {
