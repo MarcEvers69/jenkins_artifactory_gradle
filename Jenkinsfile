@@ -36,7 +36,7 @@ pipeline {
                     tool: "MyGradle", // Tool name from Jenkins configuration
                     rootDir: ".",
                     buildFile: 'build.gradle',
-                    tasks: 'clean artifactoryPublish',
+                    tasks: 'clean assemble artifactoryPublish',
                     deployerId: "GRADLE_DEPLOYER",
                     resolverId: "GRADLE_RESOLVER"
                 )
