@@ -5,7 +5,7 @@ package jenkins_artifactory_gradle;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello worlds.";
     }
 
     public static void main(String[] args) {
